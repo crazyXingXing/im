@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.jobcn'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+//    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()
+
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    //spring boot
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-pattern', version: '2.0.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.0.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.0.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-websocket', version: '2.0.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.0.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.0.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.0.3.RELEASE'
+
+    //msql
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
+
+    //smack
+    compile group: 'org.igniterealtime.smack', name: 'smack-core', version: '4.2.3'
+    compile group: 'org.igniterealtime.smack', name: 'smack-java7', version: '4.2.3'
+    compile group: 'org.igniterealtime.smack', name: 'smack-tcp', version: '4.2.3'
+    compile group: 'org.igniterealtime.smack', name: 'smack-imTest', version: '4.2.3'
+    compile group: 'org.igniterealtime.smack', name: 'smack-extensions', version: '4.2.3'
+    compile group: 'org.jxmpp', name: 'jxmpp-core', version: '0.6.2'
+    compile group: 'org.jxmpp', name: 'jxmpp-util-cache', version: '0.6.2'
+
+
+    compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity4', version: '3.0.2.RELEASE'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.47'
+
+}

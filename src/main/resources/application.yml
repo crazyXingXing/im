@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://192.168.61.137:3306/openfire?serverTimezone=UTC&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: w5566
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    tomcat:
+      max-wait: 10000
+      max-active: 100
+      test-on-borrow: true
+      validationQuery: select 1
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+server:
+  port: 8888
+openfire:
+  host: 192.168.61.137
+  port: 5222
+  password: w5566
+  domain: winson.com
